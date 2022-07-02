@@ -1,31 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAdd } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+export default function TodoForm(props) {
+    const [input, setInput] = useState('');
+    const onhandlechange = e => {
+        setInput(e.target.value);
+    }
+    const handle = (e) => {
+        e.preventDefault();
+        props.addTask({
+            id: Math.floor(Math.random() * 1000000),
+            text: input,
+            isComplete: false
+        })
+        setInput('');
 
-export default function TodoForm() {
-  return (
-    <>
-    <form className="mt-4" action="SearchNote" method="get">
-			<div className="mb-3">
+    }
+    return (
+
+        <form>
+            <div className="">
                 <nav className='nav'>MY TODO's LIST</nav>
-				<div className="row">
-					
-                    <div className="">
-						<input type="text" id="searchID" className="form-control" name="search" placeholder="Search Note" required />
-					</div>
-					
-                    
-                    <div className="">
-						<button type="submit" id="search-btn" className="btn btn-primary"><FontAwesomeIcon icon={faSearch}> </FontAwesomeIcon>Search</button>
-						<a href="ShowNotes" className="btn btn-secondary">Show All Notes</a>
-					</div>
-				</div>
-			
-			  
-			</div>
-			
-			
-		  </form>
-    </>
-  )
+                {/*<h2 className='heading'>Add Todo</h2>
+                       */}
+                <div className="row">
+                    <input type="text" onChange={onhandlechange} id="searchID" placeholder="Add Note" value={input} />
+                    <button type="submit" onClick={handle} id="search-btn" className="btn"><FontAwesomeIcon icon={faAdd}> </FontAwesomeIcon></button>
+                </div>
+            </div>
+            
+
+
+
+        </form>
+
+    )
 }

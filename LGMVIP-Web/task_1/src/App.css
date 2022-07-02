@@ -1,10 +1,21 @@
 .App {
   text-align: center;
-}
+
+ }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+body {
+  background: rgb(68, 100, 173);
+  background: linear-gradient(
+      100deg,
+      rgba(68, 100, 173, 1),
+      rgba(74, 21, 110, 1)
+  );height: auto;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,16 +24,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
@@ -37,13 +38,110 @@
   }
 }
 .row{
-  display: flex;
-  margin: auto;
+
+
+  margin:0 auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
+  margin-top: 70px;
 }
 .nav{
   font-size: 50px;
-  background-color: bisque;
-  color: black;
+  font-family: fantasy;
+  color: rgb(86, 7, 120);
   height: fit-content;
+  margin-top: 100px;
+  text-shadow: 1px 1px 15px rgb(176, 230, 255);
+ 
 
+}
+#searchID{
+   width: 400px;
+   height: 50px;
+  margin-left:20px ;
+
+}
+#search-btn{
+ 
+  height: 50px;
+  
+  width: 40px;
+  margin-left: 10px;
+
+}
+.heading{
+  margin:0 auto;
+  text-shadow: 2px 2px 15px rgb(176, 230, 255);
+  margin-top: 20px;
+  font-size: 30px;
+  color: wheat;
+}
+.rowU h2{
+ width: 50%;
+}
+.row div{
+  width: 50%;
+ }
+ .showAll{
+  text-align: right;
+  margin-left: 200px;
+  margin-right:10px;
+  font-size: 30px;
+ }
+ .todo-container {
+  justify-content: center;
+  align-items: center;
+}
+.trash-btn,
+.check-btn {
+    background-color: rgba(74, 21, 110, 1);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s all ease;
+}
+
+.check-btn {
+    background-color: rgba(68, 100, 173, 1);
+}
+
+.check-btn:hover {
+    background-color: rgba(68, 100, 173, 1);
+    color: white;
+}
+
+.trash-btn:hover {
+    color: white;
+    background-color: rgba(74, 21, 110, 1);
+}
+
+.todo {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s ease;
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 40px;
+   
+}
+.todo {
+  color: rgb(88, 87, 87);
+}
+
+.todo li {
+  flex: 1;
+  background-color: aliceblue;
+ 
+}
+.todo-item{
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.completed {
+  opacity: 2;
+  text-decoration: line-through;
 }
