@@ -15,21 +15,25 @@ export default function TodoList() {
         
     }
     const deleteTask=id=>{
+         todo.map(tod => {
+            if (tod.id === id) {
+                tod.Del = 1;
+            }
+        });
         let updatetodo=[...todo].filter(task=>task.id!==id);
+       
         setTodo(updatetodo);
     }
 
 
-    const completeTask=(id)=>{
-        
-        let updateT=todo.map(todos=>{
-            if(todos.id===id){
-                todos.isComplete=true;
-                
+    function completeTask(id) {
+        let updatedTasks = todo.map(tod => {
+            if (tod.id === id) {
+                tod.isComplete = 1;
             }
-            return todo;
-        })
-        setTodo(updateT);
+            return tod;
+        });
+        setTodo(updatedTasks);
     }
 
     return (

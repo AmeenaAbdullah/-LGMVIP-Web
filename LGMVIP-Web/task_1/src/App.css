@@ -2,11 +2,6 @@
   text-align: center;
 
  }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 body {
   background: rgb(68, 100, 173);
   background: linear-gradient(
@@ -59,16 +54,21 @@ body {
    width: 400px;
    height: 50px;
   margin-left:20px ;
+  border-radius:5px ;
 
 }
 #search-btn{
- 
   height: 50px;
-  
-  width: 40px;
+  border-radius:5px ;
+  width: 50px;
   margin-left: 10px;
 
+
 }
+#search-btn:hover{
+  background-color: rgba(68, 100, 173, 1);
+}
+
 .heading{
   margin:0 auto;
   text-shadow: 2px 2px 15px rgb(176, 230, 255);
@@ -86,11 +86,12 @@ body {
   text-align: right;
   margin-left: 200px;
   margin-right:10px;
-  font-size: 30px;
+  font-size: 70px;
  }
  .todo-container {
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 .trash-btn,
 .check-btn {
@@ -111,7 +112,9 @@ body {
     background-color: rgba(68, 100, 173, 1);
     color: white;
 }
-
+.btn{
+  background-color: rgba(74, 21, 110, 1);
+}
 .trash-btn:hover {
     color: white;
     background-color: rgba(74, 21, 110, 1);
@@ -119,21 +122,30 @@ body {
 
 .todo {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  transition: all 0.5s ease;
-   width: 50%;
-   margin: 0 auto;
-   margin-top: 40px;
-   
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.fall {
+  animation: fall-apart 0.5s ease-out;
+}
+
+@keyframes fall-apart {
+  100% {
+      transform: rotateZ(20deg) translateY(8rem);
+      opacity: 0;
+  }
 }
 .todo {
   color: rgb(88, 87, 87);
+  border-radius:5px ;
 }
 
 .todo li {
   flex: 1;
+  min-width: 100%;
   background-color: aliceblue;
  
 }
@@ -141,7 +153,15 @@ body {
   padding: 1rem;
   font-size: 1.2rem;
 }
-.completed {
-  opacity: 2;
+.complete{
   text-decoration: line-through;
+  opacity: 0.5;
+}
+.todo-list{
+  
+  width: fit-content;
+   margin:0 auto;
+}
+.hide{
+  display: none;
 }
