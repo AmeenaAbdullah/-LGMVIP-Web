@@ -21,7 +21,7 @@ export default function TodoForm(props) {
     return (
        <form>
             <div className="">
-                <nav className='nav'>MY TODO's LIST</nav>
+                <nav className='nav'>The To Do List</nav>
                 <div className="row">
                     <input type="text" onChange={onhandlechange} id="searchID" placeholder="Add Note" value={input} />
                     <button type="submit" onClick={handle} id="search-btn" className="btn"><FontAwesomeIcon icon={faAdd}> </FontAwesomeIcon></button>

@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+body{
+  background: linear-gradient(
+      100deg,
+      rgb(166, 175, 197),
+      rgb(33, 24, 40)
+  );
+}
+@media screen and (max-width:60px) {
+  .card{
+    width:100%;
+    display: block;
+    
+  }
+}
+
+.getuser{
+  
+  border-radius: 50px;
+  border: 3px black;
+  background: linear-gradient(
+    100deg,
+    rgb(222, 227, 236),
+    rgb(180, 170, 205)
+);
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  width: fit-content;
+  padding: 0px 20px 0px 20px;
+  color: rgb(29, 51, 51);
+  margin-top: 20px;
+}
+.getuser:hover{
+  cursor: pointer;
+  background: linear-gradient(
+    100deg,
+    rgb(62, 67, 79),
+    rgb(53, 42, 81)
+);
+color:white;
+}
+.cards{
+  margin:0 auto;
+  width: 90%;
+  padding: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+
+}
+.cards h1{
+  color:white;
+}
+.card{
+  flex-direction: column; 
+  background: linear-gradient(
+      100deg,
+      rgb(47, 48, 50),
+      rgb(35, 27, 57)
+  );
+  text-align: center;
+  border-radius: 20px;
+  list-style: none;
+  margin: 20px;
+   float: left;
+   width: 28%;
+   padding:0px ;
+   
+}
+.card:hover{
+  cursor:pointer;
+  box-shadow: 10px 10px 10px 10px;
+}
+img{
+  width: 60%;
+  height: 60%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 260px;
+}
+
+.NavbarItems {
+  background: linear-gradient(
+      100deg,
+      rgb(47, 48, 50),
+      rgb(23, 20, 31)
+  );
+  margin: 0;
+  padding: 0;
+  height: 80px;
+}
+
+.NavbarItems h1 {
+  color: white;
+  float: left;
+  width: 40%;
+  font-size: 40px;
+  padding-top:0px ;
+  margin:10px;
+  text-align: left;
+  margin-left: 190px;
+}
+.col h3{
+  color: white;
+}
+.NavLIST {
+  display: inline;
+  list-style: none;
+  font-size: 28px;
+  padding: 10px;
+  color: aliceblue;
+  line-height: 80px;
+}
+
+.NavLIST:hover {
+ cursor: pointer;
+ color: rgb(69, 79, 194);
+}
