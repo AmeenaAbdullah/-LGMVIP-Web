@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Form from './Components/Form';
+import StudentList from './Components/StudentList';
 
 function App() {
   return (
     <div className="App">
-     <h1 className="App-header">Registration Form</h1>
-    <Form />
+      <h1 className='mainHeading'>Registration Form</h1>
+      <StudentList />
     </div>
   );
 }
